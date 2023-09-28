@@ -1,18 +1,19 @@
-import config from '../lib/config';
-const heroimages = config.heroItems.map(item => item.label);
+
 import React from 'react'
 import Image from 'next/image'
 import {CgShoppingCart} from 'react-icons/cg'
-const headerImg = heroimages[0];
-const featured1 = heroimages[1];
-const featured2 = heroimages[2];
-const featured3 = heroimages[3];
-const featured4 = heroimages[4];
+import config from '../lib/config';
 import Link from 'next/link';
 
 
+const heroimages = config.heroItems.map(item => item.label);
 const heroLabels = config.heroItems.map(item => item.label);
 
+const headerImg = heroimages[0].imagePath;
+const featured1 = heroimages[1].imagePath;
+const featured2 = heroimages[2].imagePath;
+const featured3 = heroimages[3].imagePath;
+const featured4 = heroimages[4].imagePath;
 
 const HeroBanner = () => {
   return (
