@@ -1,4 +1,18 @@
-# Product Categories
+# How to Code products
+Use  
+ALI express |
+ALi baba  |
+Amazon |
+Wish |
+Local Shopfiy stores |  
+ 
+ get all products get niche specific products either using webscraping or get all the products and then use AI to categorise
+ Make Graphs and charts then estimate the prfits after calculating shipping fee etc
+
+
+
+
+## Product Categories
 
 ## Electronics
 - Smartphones
