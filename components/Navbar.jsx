@@ -65,7 +65,7 @@ const Navbar = ({Searchproducts}) => {
                     <span className='cart-item-qty'>{totalQty}</span> 
                   </button>
               </Link> 
-              {config.smallScreenNavItems.map((item, index) => (
+              {config.navbarItems.map((item, index) => (
                 <Link key={index} href={item.href}>
                   <li>{item.label}</li>
                 </Link>
