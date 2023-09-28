@@ -9,20 +9,17 @@ import featured4 from '../src/assets/Featured4.png';
 import Link from 'next/link';
 import config from '../lib/config';
 
-const c = config.heroItems[0]
-const saleLine = "hello"
-const openLine = "hellos"
-const secondLine = "world"
-console.log(c,openLine,saleLine)
+const heroLabels = config.heroItems.map(item => item.label);
+
 
 const HeroBanner = () => {
   return (
     <header className='header'>
         <div className='header-left-side'>
             <div className='header-content'>
-                <span>{saleLine}</span>
-                <h1>{openLine}</h1>
-                <p>{secondLine}</p>
+                <span>{heroLabels[0]}</span>
+                 <h1>{heroLabels[1]}</h1>
+                 <p>{heroLabels[2]}</p>
                 <Link href='/products'>
                      <button className='btn' type='button'><CgShoppingCart size={26} />  Start Shopping</button>
                 </Link>
