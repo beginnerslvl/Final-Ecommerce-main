@@ -3,11 +3,11 @@ const heroimages = config.heroItems.map(item => item.label);
 import React from 'react'
 import Image from 'next/image'
 import {CgShoppingCart} from 'react-icons/cg'
-import headerImg from heroimages[0];
-import featured1 from heroimages[1];
-import featured2 from heroimages[2];
-import featured3 from heroimages[3];
-import featured4 from heroimages[4];
+const headerImg = heroimages[0];
+const featured1 = heroimages[1];
+const featured2 = heroimages[2];
+const featured3 = heroimages[3];
+const featured4 = heroimages[4];
 import Link from 'next/link';
 
 
