@@ -1,13 +1,15 @@
+import config from '../lib/config';
+const heroimages = config.heroItems.map(item => item.label);
 import React from 'react'
 import Image from 'next/image'
 import {CgShoppingCart} from 'react-icons/cg'
-import headerImg from '../src/assets/header.png'
-import featured1 from '../src/assets/Featured1.png';
-import featured2 from '../src/assets/Featured2.png';
-import featured3 from '../src/assets/Featured3.png';
-import featured4 from '../src/assets/Featured4.png';
+import headerImg from heroimages[0];
+import featured1 from heroimages[1];
+import featured2 from heroimages[2];
+import featured3 from heroimages[3];
+import featured4 from heroimages[4];
 import Link from 'next/link';
-import config from '../lib/config';
+
 
 const heroLabels = config.heroItems.map(item => item.label);
 
