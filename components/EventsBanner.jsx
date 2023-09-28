@@ -11,19 +11,19 @@ const large_Promotions = eventtext[1]
 
 const block1 = eventtext[2]
 const block1B = eventtext[3]
-const block1c = eventtext[3]
+const block1c = eventtext[4]
 
-const Block2 = eventtext[4]
-const Block2_b = eventtext[5]
-const Block2_c = eventtext[6]
+const Block2 = eventtext[5]
+const Block2_b = eventtext[6]
+const Block2_c = eventtext[7]
 
-const product1 = eventtext[6]
-const product1_cost = eventtext[7]
-const product1_cost_on_sale = eventtext[8]
+const product1 = eventtext[8]
+const product1_cost = eventtext[9]
+const product1_cost_on_sale = eventtext[10]
 
-const product2 = eventtext[9]
-const product2_cost = eventtext[10]
-const product2_cost_on_sale = eventtext[11]
+const product2 = eventtext[11]
+const product2_cost = eventtext[12]
+const product2_cost_on_sale = eventtext[13]
 
 const EventsBanner = () => {
   return (
