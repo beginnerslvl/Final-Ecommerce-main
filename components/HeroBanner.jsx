@@ -29,16 +29,16 @@ const HeroBanner = () => {
             </div>
 
             <div className='header-featured'>
-                <Image src={featured1} width={100} height={35} alt='img' />
-                <Image src={featured2} width={100} height={35} alt='img' />
-                <Image src={featured3} width={100} height={35} alt='img' />
-                <Image src={featured4} width={100} height={35} alt='img' />
+                <Image src={heroimages[1].imagePath} width={100} height={35} alt='img' />
+                <Image src={heroimages[2].imagePath} width={100} height={35} alt='img' />
+                <Image src={heroimages[3].imagePath} width={100} height={35} alt='img' />
+                <Image src={heroimages[4].imagePath} width={100} height={35} alt='img' />
             </div>
         </div>
 
         <div className='header-right-side'>
             <div className='header-circle'>
-                <Image className='header-img' src={headerImg} width={650} height={650} alt='header image' />
+                <Image className='header-img' src={heroimages[0].imagePath} width={650} height={650} alt='header image' />
             </div>
         </div>
     </header>
