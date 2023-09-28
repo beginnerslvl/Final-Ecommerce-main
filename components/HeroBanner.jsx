@@ -12,6 +12,7 @@ import config from '../lib/config';
 const saleLine = config.heroItems[0]
 const openLine = config.heroItems[1]
 const secondLine = config.heroItems[2]
+console.log(secondLine,openLine,saleLine)
 
 const HeroBanner = () => {
   return (
