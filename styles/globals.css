@@ -5,13 +5,18 @@
   padding: 0;
   margin: 0;
 }
+:root{
+    --primaryColor:#03002E;
+    --primaryColor1:#060061;
+    --primaryColor2:white;
+}
 
 html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
   font-family: 'Sora', sans-serif;
-  background-color: #03002E;
+  background-color: var(--primaryColor);
 }
 
 a {
@@ -26,13 +31,13 @@ nav li, footer li, .size li, button, .cart, .navbar-smallscreen_links {
   font-family: 'Sora', sans-serif;
   font-weight: 600;
   line-height: 18px;
-  background-color: white;
+  background-color: var(--primaryColor2);
   padding: 10px 0;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  color: #212121;
+  color: var(--primaryColor1);
 }
 .subtitle {
   text-align: center;
@@ -55,7 +60,7 @@ nav li, footer li, .size li, button, .cart, .navbar-smallscreen_links {
   line-height: 40px;
   text-align: center;
   letter-spacing: 0.03em;
-  color: white;
+  color: var(--primaryColor2);
 }
 /*----------- Margin & Padding Section --------------*/
 .header, .Allproducts-container, 
@@ -82,7 +87,7 @@ nav {
   display: flex;
   align-items: center;
   width: 30%;
-  border: 1px solid #353257;
+  border: 1px solid var(--primaryColor2);
   border-radius: 5px;
   padding: 0 5px;
 }
@@ -94,7 +99,7 @@ nav input {
 .cart, .cart-small-screen {
   display: flex;
   padding: 12px;
-  background-color: #1C1942;
+  background-color: darkgoldenrod;
   border-radius: 50%;
   border: none;
   position: relative;
@@ -108,8 +113,8 @@ nav input {
   top: 0;
   right: 5px;
   font-size: 12px;
-  color:  #f02d34;
-  background-color: #eee;
+  color:  var(--primaryColor1);
+  background-color: var(--primaryColo2);
   width: 18px;
   height: 18px;
   border-radius: 50%;
@@ -141,14 +146,14 @@ nav input {
   gap: 2.5rem;
 }
 .header-content span {
-  background-color: blue;
+  background-color: var(--primaryColor1);
   height: 40px;
   width: 120px;
   border-radius: 6px;
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #e1edff;
+  color: var(--primaryColor2);
   font-weight: 600;
 }
 .header-content h1 {
@@ -156,13 +161,13 @@ nav input {
   font-size: 3.5rem;
   line-height: 55px;
   letter-spacing: 0.03em;
-  color: white;
+  color: var(--primaryColor2);
 }
 .header-content p {
   font-weight: 400;
   font-size: 1rem;
   line-height: 24px;
-  color: #babac2;
+  color: var(--primaryColor2);
   width: 70%;
 }
 .header-content .btn {
@@ -179,7 +184,7 @@ nav input {
   width: 600px;
   height: 600px;
   border-radius: 50%;
-  background-color: #353257;
+  background-color: var(--primaryColor1);
 }
 .header-circle .header-img {
   position: absolute;
@@ -205,15 +210,15 @@ nav input {
   align-items: center;
   padding: 0 2rem;
   letter-spacing: 0.05em;  
-  color: #d6d6d8;
+  color: var(--primaryColor2);
 }
 .event-card:first-child img {
   width: 260px;
   height: 200px;
 }
 .event-card:last-child {
-  background-color: white;
-  color: #353257;
+  background-color: var(--primaryColor2);
+  color: var(--primaryColor1);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -254,9 +259,9 @@ nav input {
   font-size: 17px;
   line-height: 21px;
   letter-spacing: 0.25em;
-  color: #353257;
+  color: var(--primaryColor1);
   border: none;
-  background: white;
+  background: var(--primaryColor2);
   padding: 0.5rem 2.5rem;
   margin-top: 5px;
   border-radius: 8px;
@@ -276,11 +281,10 @@ nav input {
   align-items: center;
 }
 .event-banner-right-1 {
-  background-color: #4e4c6c;
+  background-color: var(--primaryColor1);
 }
 .event-banner-right-2 {
-  background-color: 
-  #676681;
+  background-color: var(--primaryColor1);
 }
 .event-banner-right-1 img, .event-banner-right-2 img {
   width: 280px;
@@ -335,7 +339,7 @@ nav input {
   font-weight: 600;
   line-height: 24px;
   letter-spacing: 0.03em;
-  color: white;
+  color: var(--primaryColor2);
 }
 .Allproduct-name {
   font-size: 1.05rem;
@@ -345,7 +349,7 @@ nav input {
   font-weight: 600;
   font-size: 15px;
   line-height: 15px;
-  color: #888888;
+  color: var(--primaryColor2);
   margin-top: 0.5rem;
 }
 .Allproduct-price {
@@ -368,7 +372,7 @@ nav input {
 }
 .product-name, .product-price {
   font-weight: 600;
-  color: white;
+  color: var(--primaryColor2);
   margin-top: 0.5rem;
   line-height: 24px;
 }
@@ -399,7 +403,7 @@ nav input {
 
 /*-------------------- SINGLE PRODUCT PAGE ------------------*/
 .products {
-  background-color: #353257;
+  background-color: var(--primaryColor1);
 }
 .product-detail-container {
   display: flex;
@@ -440,7 +444,7 @@ nav input {
   font-size: 1.625rem;
   line-height: 33px;
   letter-spacing: 0.05em;
-  color: white;
+  color: var(--primaryColor2);
 }
 .name-and-category span {
   font-weight: 600;
@@ -454,7 +458,7 @@ nav input {
   letter-spacing: 0.05em;
 }
 .size p {
-  color: white;
+  color: var(--primaryColor2);
 }
 .size ul {
   display: flex;
@@ -470,11 +474,10 @@ nav input {
   border-radius: 50%;
   cursor: pointer;
   font-size: 1rem;
-  color: 
-  #b3b2c0;
+  color: var(--primaryColor2);
 }
 .size li:hover {
-  box-shadow: #e5e5ea 0px 7px 29px 0px;
+  box-shadow: var(--primaryColor2) 0px 7px 29px 0px;
 }
 .quantity-desc {
   display: flex;
@@ -487,12 +490,12 @@ nav input {
 }
 .minus {
   margin-right: 10px;
-  border: 2px solid #9a99ab;
-  background-color: #9a99ab;
+  border: 2px solid var(--primaryColor2);
+  background-color: var(--primaryColor2);
 }
 .plus {
   margin-left: 10px;
-  border: 2px solid white;
+  border: 2px solid var(--primaryColor2);
 }
 .add-to-cart {
   display: flex;
@@ -508,10 +511,10 @@ nav input {
   font-size: 1.5rem;
   line-height: 30px;
   letter-spacing: 0.1em;
-  color: white;
+  color: var(--primaryColor2);
 }
 .product-desc-container {
-  background-color:  #ccccd5;
+  background-color:  var(--primaryColor2);
   display: flex;
   flex-direction: column;
   margin-top: 4rem;
@@ -519,7 +522,7 @@ nav input {
   gap: 2rem;
 }
 .desc-title {
-  border-bottom: 2px solid  #353257;
+  border-bottom: 2px solid  var(--primaryColor1);
   position: relative;
   width: 100%;
   height: 150px;
@@ -529,7 +532,7 @@ nav input {
   font-size: 1.4rem;
   line-height: 25px;
   letter-spacing: 0.05em;
-  color: white;
+  color: var(--primaryColor2);
   padding-bottom: 3rem;
   z-index: 2;
   top: 45%;
@@ -539,7 +542,7 @@ nav input {
   font-weight: 800;
   font-size: 7.5rem;
   line-height: 151px;
-  color: #1c1942;
+  color: var(--primaryColor1);
   opacity: 0.7;
   z-index: -1;
   width: 100%;
@@ -555,7 +558,7 @@ nav input {
   font-size: 1rem;
   line-height: 19px;
   letter-spacing: 0.05em;
-  color: #b3b2c0;
+  color: var(--primaryColor2);
 }
 .product-desc-container p, .product-desc-container li {
   font-weight: 300;
@@ -563,7 +566,7 @@ nav input {
   line-height: 26px;
   text-align: justify;
   letter-spacing: 0.05em;
-  color: white;
+  color: var(--primaryColor2);
 }
 .product-desc-container p, .product-desc-container ul {
   flex: 2;
@@ -584,7 +587,7 @@ nav input {
 }
 .order-summary {
   padding: 2rem;
-  background: #4e4c6c;
+  background: var(--primaryColor1);
   display: flex;
   flex-direction: column;
   flex: 1;
@@ -643,18 +646,17 @@ nav input {
   font-weight: 300;
   font-size: 1.3rem;
   line-height: 25px;
-  color: white;
+  color: var(--primaryColor2);
 }
 .item-tag, .delivery-est, .delivery-days {
   font-weight: 600;
   font-size: 1rem;
   line-height: 22px;
-  color: white;
+  color: var(--primaryColor2);
 }
 .item-tag {
   line-height: 16px;
-  color: 
-  #ccccd5;
+  color: var(--primaryColor2);
 }
 .delivery-days {
   color: #00FFFF;
@@ -682,21 +684,21 @@ nav input {
   display: flex;
   justify-content: end;
   padding: 0 8rem 2rem;
-  background: linear-gradient(180deg, white 50%, #FBFCFF 50%);
+  background: linear-gradient(180deg var(--primaryColor2) 50%);
 }
 .features-section .title h1 {
   font-weight: 700;
   font-size: 2.75rem;
   line-height: 55px;
   letter-spacing: 0.03em;
-  color: white;
+  color: var(--primaryColor2);
   width: 45%;
 }
 .features-section .content {
   display: grid;
   grid-template-columns: 1fr 1fr;
   padding: 0 8rem 4rem;
-  background-color: #353257;
+  background-color: var(--primaryColor1);
 }
 .features-section .content .left {
   display: grid;
@@ -710,7 +712,7 @@ nav input {
   font-size: 6.875rem;
   line-height: 110px;
   position: absolute;
-  color: white;
+  color:var(--primaryColor2) ;
   opacity: 0.07;
   z-index: 1;
 }
@@ -723,7 +725,7 @@ nav input {
   font-size: 1.125rem;
   line-height: 20px;
   letter-spacing: 0.03em;
-  color: white;
+  color: var(--primaryColor2);
   margin-bottom: 1rem;
 }
 .features-section .content .left p {
@@ -731,7 +733,7 @@ nav input {
   font-size: 1rem;
   line-height: 22px;
   letter-spacing: 0.05em;
-  color: white;
+  color: var(--primaryColor2);
 }
 .features-section .content .right {
   display: flex;
@@ -749,7 +751,7 @@ nav input {
   font-size: 1rem;
   line-height: 26px;
   text-align: justify;
-  color: white;
+  color: var(--primaryColor2);
 }
 .features-section .btn {
   font-size: 0.875rem;
@@ -771,7 +773,7 @@ nav input {
   font-weight: 800;
   font-size: 7.5rem;
   line-height: 151px;
-  color: #353257;
+  color: var(--primaryColor1);
   position: absolute;
   z-index: -1;
 }
@@ -781,25 +783,25 @@ nav input {
   font-size: 2rem;
   line-height: 40px;
   letter-spacing: 0.03em;
-  color: white;
+  color: var(--primaryColor2);
 }
 .newsletter p {
   margin-bottom: 2rem;
   font-weight: 300;
   font-size: 1rem;
   line-height: 26px;
-  color: white;
+  color: var(--primaryColor2);
 }
 .newsletter input {
   padding: 10px 120px 10px 20px;
-  background: #1c1942;
-  border: 1px solid #ccccd5;
+  background: var(--primaryColor1);
+  border: 1px solid var(--primaryColor2);
 }
 .newsletter button {
   padding: 10px 20px;
   margin-left: 10px;
-  background-color: white;
-  color: black;
+  background-color: var(--primaryColor2);
+  color: var(--primaryColor1);
   font-weight: 600;
   font-size: 0.9rem;
   line-height: 16px;
@@ -807,7 +809,7 @@ nav input {
 
 /*-------------------- FOOTER SECTION ------------------*/
 footer {
-  background-color: #1c1942;
+  background-color: var(--primaryColor1);
 }
 .footer {
   display: grid;
@@ -825,7 +827,7 @@ footer {
 }
 .icon-container div {
   padding: 10px 12px;
-  background-color: #353257;
+  background-color: var(--primaryColor1);
   border-radius: 10px;
   cursor: pointer;
 }
@@ -839,18 +841,18 @@ footer p, footer li {
   font-weight: 400;
   font-size: 1rem;
   line-height: 22px; 
-  color: #ccccd5;
+  color: var(--primaryColor2);
 }
 .footer-links h3 {
   font-weight: 700;
   font-size: 1.2rem;
   line-height: 19px;
   letter-spacing: 0.02em;
-  color: #ccccd5;
+  color: var(--primaryColor2);
 }
 .copyright {
   margin-top: 6rem;
-  border-top: 1px solid #ccccd5;
+  border-top: 1px solid var(--primaryColor2);
   display: grid;
   grid-template-columns: auto auto auto;
 }
@@ -861,13 +863,13 @@ footer p, footer li {
   font-weight: 700;
   font-size: 1rem;
   line-height: 15px;
-  color: white;
+  color: var(--primaryColor2);
 }
 
 /*------------------ SUCCESS PAYMENT PAGE ----------------*/
 .success {
   padding: 6rem 0;
-  background-color: #F1F1F1;
+  background-color: var(--primaryColor2);
   display: flex;
   flex-direction: column;
   justify-content: center;
