@@ -7,15 +7,20 @@ import featured2 from '../src/assets/Featured2.png';
 import featured3 from '../src/assets/Featured3.png';
 import featured4 from '../src/assets/Featured4.png';
 import Link from 'next/link';
+import config from '../lib/config';
+
+const saleLine = config.heroItems[0]
+const openLine = config.heroItems[1]
+const secondLine = config.heroItems[2]
 
 const HeroBanner = () => {
   return (
     <header className='header'>
         <div className='header-left-side'>
             <div className='header-content'>
-                <span>Sale 70%</span>
-                <h1>An Industrial Take on Streetwear</h1>
-                <p>Anyone can beat you but no one can beat your outfit as long as you wear Dine outfits.</p>
+                <span>{saleLine}</span>
+                <h1>{openLine}</h1>
+                <p>{secondLine}</p>
                 <Link href='/products'>
                      <button className='btn' type='button'><CgShoppingCart size={26} />  Start Shopping</button>
                 </Link>
