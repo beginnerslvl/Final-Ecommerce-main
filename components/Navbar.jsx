@@ -19,10 +19,11 @@ const Navbar = ({Searchproducts}) => {
         <Image src={logo} width={140} height={25} alt='logo' />
       </Link>
       <ul className='nav-links'>
-        <Link href='/female'><li>{config.Navbar1}</li></Link>
-        <Link href='/male'><li>{config.Navbar2}</li></Link>
-        <Link href='/kids'><li>{config.Navbar3}</li></Link>
-        <Link href='/products'><li>{config.Navbar4}</li></Link>
+        {config.navbarItems.map((item, index) => (
+          <Link key={index} href={item.href}>
+            <li>{item.label}</li>
+          </Link>
+        ))}
       </ul>
 
         <div className='search-bar'>
