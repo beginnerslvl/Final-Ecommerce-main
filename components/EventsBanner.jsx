@@ -4,7 +4,7 @@ import event1 from '../src/assets/event1.png'
 import event2 from '../src/assets/event2.png' 
 import event3 from '../src/assets/event3.png' 
 import config from '../lib/config';
-const eventtext = config.heroItems.map(item => item.label);
+const eventtext = config.eventtext.map(item => item.label);
 
 const small_Promotions = eventtext[0]
 const large_Promotions = eventtext[1]
@@ -16,8 +16,6 @@ const block1c = eventtext[3]
 const Block2 = eventtext[4]
 const Block2_b = eventtext[5]
 const Block2_c = eventtext[6]
-
-
 
 const product1 = eventtext[6]
 const product1_cost = eventtext[7]
