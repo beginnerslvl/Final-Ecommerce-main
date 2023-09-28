@@ -64,7 +64,7 @@ const EventsBanner = () => {
 
           <div className='event-banner-right-2'>
             <div className='details'>
-              <p>{product2}r</p>
+              <p>{product2}</p>
               <div className='price'>
                 <span>{product2_cost}</span>
                 <span>{product2_cost_on_sale}</span>
