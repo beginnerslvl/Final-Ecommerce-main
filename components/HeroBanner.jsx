@@ -9,9 +9,9 @@ import featured4 from '../src/assets/Featured4.png';
 import Link from 'next/link';
 import config from '../lib/config';
 
-const saleLine = config.heroItems[0]
-const openLine = config.heroItems[1]
-const secondLine = config.heroItems[2]
+const saleLine = "hello"
+const openLine = "hellos"
+const secondLine = "world"
 console.log(secondLine,openLine,saleLine)
 
 const HeroBanner = () => {
