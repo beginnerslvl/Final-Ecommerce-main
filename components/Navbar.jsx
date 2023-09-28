@@ -65,10 +65,9 @@ const Navbar = ({Searchproducts}) => {
                     <span className='cart-item-qty'>{totalQty}</span> 
                   </button>
               </Link> 
-              <Link href='/female'><li>Female</li></Link>
-              <Link href='/male'><li>Male</li></Link>
-              <Link href='/kids'><li>Kids</li></Link>
-              <Link href='/products'><li>All Products</li></Link>
+              <Link key={index} href={item.href}>
+            <li>{item.label}</li>
+          </Link>
             </ul>
           </div>
         )}
