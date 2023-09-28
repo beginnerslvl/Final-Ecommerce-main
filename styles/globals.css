@@ -283,9 +283,11 @@ nav input {
 }
 .event-banner-right-1 {
   background-color: var(--primaryColor1);
+  color: var(--primaryColor2);
 }
 .event-banner-right-2 {
   background-color: var(--primaryColor1);
+  color: var(--primaryColor2);
 }
 .event-banner-right-1 img, .event-banner-right-2 img {
   width: 280px;
