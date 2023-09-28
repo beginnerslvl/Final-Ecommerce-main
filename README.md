@@ -1,3 +1,11 @@
+## Aim 
+Work on global.css file to change design using AI  
+work on getting all the products listed at
+[Complete Product Section](product.md)
+
+## AI aims
+AI auto Logo Maker --> AI auto Image editor --> AI sample video creation
+
 ### Sample Design Look
 ![Design overview for Dine Market e-commerce](./src/assets/header-section.png)
 For now the search bar is only for styling purposes and doesn't work properly yet
