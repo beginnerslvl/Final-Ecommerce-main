@@ -1,7 +1,7 @@
 ## Aim 
 Work on global.css file to change design using AI  
 work on getting all the products listed at
-[Complete Product Section](product.md)
+[Complete Product Section](Product.md)
 
 ## AI aims
 AI auto Logo Maker --> AI auto Image editor --> AI sample video creation
@@ -16,9 +16,8 @@ The live site is deployed in vercel, but it seems that vercel can't render swipe
 
 
 
-
 ## Getting Started
-
+[Code Review](Product.md)
 To run the development server:
 
 ```bash
