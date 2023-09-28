@@ -6,6 +6,7 @@ import logo from '../src/assets/Logo.png'
 import Link from 'next/link'
 import {RiMenu3Line, RiCloseLine } from 'react-icons/ri';
 import { useStateContext } from '../context/StateContext';
+import config from '../lib/config';
 
 const Navbar = ({Searchproducts}) => {
   const {showCart, setShowCart, totalQty} = useStateContext();
@@ -18,10 +19,10 @@ const Navbar = ({Searchproducts}) => {
         <Image src={logo} width={140} height={25} alt='logo' />
       </Link>
       <ul className='nav-links'>
-        <Link href='/female'><li>Female</li></Link>
-        <Link href='/male'><li>Male</li></Link>
-        <Link href='/kids'><li>Kids</li></Link>
-        <Link href='/products'><li>All Products</li></Link>
+        <Link href='/female'><li>config.Navbar2</li></Link>
+        <Link href='/male'><li>config.Navbar3</li></Link>
+        <Link href='/kids'><li>config.Navbar4</li></Link>
+        <Link href='/products'><li>config.Navbar5</li></Link>
       </ul>
 
         <div className='search-bar'>
