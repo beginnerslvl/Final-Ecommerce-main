@@ -1,19 +1,39 @@
-import React, { useState } from 'react'
-import { client, urlFor } from '../../lib/client'
-import { AiOutlineMinus, AiOutlinePlus } from 'react-icons/ai'
-import {CgShoppingCart} from 'react-icons/cg'
+import React, { useState } from 'react';
+import { AiOutlineMinus, AiOutlinePlus } from 'react-icons/ai';
+import { CgShoppingCart } from 'react-icons/cg';
 import { useStateContext } from '../../context/StateContext';
 
-const ProductDetails = ({products, product}) => {
-    const { image, name, details, price, tags, care } = product;
-    const [index, setIndex] = useState(0);
-    const {decQty, incQty, qty, onAdd} = useStateContext();
+const localProducts = [
+  {
+    image: ['image-url-1', 'image-url-2'],
+    name: 'Product 1',
+    details: [{ children: [{ text: 'Product 1 details' }] }],
+    price: 10,
+    tags: 'Tag 1',
+    care: [{ children: [{ text: 'Care instructions for Product 1' }] }],
+  },
+  {
+    image: ['image-url-3', 'image-url-4'],
+    name: 'Product 2',
+    details: [{ children: [{ text: 'Product 2 details' }] }],
+    price: 15,
+    tags: 'Tag 2',
+    care: [{ children: [{ text: 'Care instructions for Product 2' }] }],
+  },
+];
 
-    const careList = [];
+const ProductDetails = ({ productSlug }) => {
+  const product = localProducts.find((p) => p.slug === productSlug);
 
-    {for (let i = 0; i < care.length; i++) {
-        careList.push(care[i].children[0].text)
-    }}
+  if (!product) {
+    return <div>Loading...</div>;
+  }
+
+  const { image, name, details, price, tags, care } = product;
+  const [index, setIndex] = useState(0);
+  const { decQty, incQty, qty, onAdd } = useStateContext();
+
+  const careList = care.map((item) => item.children[0].text);
 
     return (
         <div className='products'>
@@ -87,35 +107,34 @@ const ProductDetails = ({products, product}) => {
 }
 export default ProductDetails
 
-export const getStaticProps = async ({params: {slug}}) => {
-    const query = `*[_type == "product" && slug.current == '${slug}'][0]`;
-    const productsQuery = '*[_type == "product"]'
-    const product = await client.fetch(query);
-    const products = await client.fetch(productsQuery)
+// ... (other imports and code)
+
+export const getStaticProps = async ({ params: { slug } }) => {
+    const product = localProducts.find((p) => p.slug === slug);
+  
+    if (!product) {
+      return {
+        notFound: true,
+      };
+    }
   
     return {
-      props: { products, product }
-    }
-}
-
-// Generates `/product/1` and `/product/2`
-export const getStaticPaths = async () => {
-    const query = `*[_type == "product"] {
-        slug {
-            current
-        }
-    }`;
-
-    const products = await client.fetch(query);
-
-    const paths = products.map((product) => ({
-        params: {
-            slug: product.slug.current
-        }
+      props: { product },
+    };
+  };
+  
+  export const getStaticPaths = async () => {
+    const paths = localProducts.map((product) => ({
+      params: {
+        slug: product.slug,
+      },
     }));
-
+  
     return {
       paths,
-      fallback: 'blocking'
-    }
-}
+      fallback: false, // Change to 'blocking' or 'true' as needed
+    };
+  };
+  
+
+
