@@ -22,19 +22,19 @@ const productData = [
   // Add more products as needed
 ];
 
-const AllProducts = ({ allproducts }) => {
-  const { name, slug, tags, price, image } = allproducts;
-
+const AllProducts = () => {
   return (
     <div>
-      <Link href={`/product/${slug}`}>
-        <div className='Allproduct-card'>
-          <img src={image} width={250} height={270} alt={name} />
-          <p className='Allproduct-name'>{name}</p>
-          <p className='Allproduct-tags'>{tags.join(', ')}</p>
-          <p className='Allproduct-price'>${price}</p>
-        </div>
-      </Link>
+      {productData.map((product) => (
+        <Link key={product._id} href={`/product/${product.slug}`}>
+          <div className='Allproduct-card'>
+            <img src={product.image} width={250} height={270} alt={product.name} />
+            <p className='Allproduct-name'>{product.name}</p>
+            <p className='Allproduct-tags'>{product.tags.join(', ')}</p>
+            <p className='Allproduct-price'>${product.price}</p>
+          </div>
+        </Link>
+      ))}
     </div>
   );
 };
