@@ -80,6 +80,11 @@ nav {
   align-items: center;
   color:var(--primaryColor2);
 }
+nav img {
+  background-color: #fff;
+  padding: .7em 1.5em ;
+  border-radius: 10px;
+}
 .nav-links {
   display: flex;
   gap: 3rem;
@@ -88,9 +93,10 @@ nav {
   display: flex;
   align-items: center;
   width: 30%;
-  border: 1px solid var(--primaryColor2);
+  border: 1px solid lightskyblue;
   border-radius: 5px;
   padding: 0 5px;
+
 }
 nav input {
   border: none;
@@ -157,6 +163,7 @@ nav input {
   color: var(--primaryColor2);
   font-weight: 600;
   font-size: .7rem;
+  text-align: center;
 }
 .header-content h1 {
   font-weight: 700;
@@ -717,8 +724,8 @@ nav input {
   font-size: 6.875rem;
   line-height: 110px;
   position: absolute;
-  color:var(--primaryColor2) ;
-  opacity: 0.07;
+  color: var(--primaryColor1);
+  opacity: .3;
   z-index: 1;
 }
 .features-section .content .left div {
