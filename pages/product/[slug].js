@@ -29,11 +29,7 @@ const ProductDetails = ({ productSlug }) => {
   console.log(product)
 
   if (!product) {
-    return   <div>
-    <h2>{product.name}</h2>
-    <p>Price: ${product.price}</p>
-    {/* Render other product details here */}
-  </div>
+    return <div>Loading...</div>;
   }
   
 
