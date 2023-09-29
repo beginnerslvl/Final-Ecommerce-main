@@ -27,6 +27,7 @@ const AllProducts = () => {
     <div>
       {productData.map((product) => (
         <Link key={product._id} href={`/product/${product.slug}`}>
+          {/* Wrap each product card in a Link */}
           <div className='Allproduct-card'>
             <img src={product.image} width={250} height={270} alt={product.name} />
             <p className='Allproduct-name'>{product.name}</p>
