@@ -29,7 +29,7 @@ const ProductDetails = ({ productSlug }) => {
   console.log(product)
 
   if (!product) {
-    return <div>Loading...</div>;
+    return <ProductDetails productSlug="product-1" />;
   }
   
 
