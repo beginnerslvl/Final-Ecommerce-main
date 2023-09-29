@@ -156,6 +156,7 @@ nav input {
   justify-content: center;
   color: var(--primaryColor2);
   font-weight: 600;
+  font-size: .7rem;
 }
 .header-content h1 {
   font-weight: 700;
@@ -205,7 +206,7 @@ nav input {
   gap: 1rem;
 }
 .event-card:first-child {
-  background-color: #353257;
+  background-color: var(--primaryColor1);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -523,6 +524,7 @@ nav input {
   margin-top: 4rem;
   padding: 2rem 4rem 6rem;
   gap: 2rem;
+  color: var(--primaryColor);
 }
 .desc-title {
   border-bottom: 2px solid  var(--primaryColor1);

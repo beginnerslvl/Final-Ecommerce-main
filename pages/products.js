@@ -15,6 +15,7 @@ const products = ({Allproducts}) => {
 export const getServerSideProps = async () => {
     const query = '*[_type == "product"]';
     const Allproducts = await client.fetch(query);
+    console.log(Allproducts)
   
     return {
       props: { Allproducts }
