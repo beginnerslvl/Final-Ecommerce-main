@@ -524,7 +524,7 @@ nav input {
   margin-top: 4rem;
   padding: 2rem 4rem 6rem;
   gap: 2rem;
-  color: rgba(var(--primaryColor),0.369);
+  color: var(--primaryColor);
 }
 .desc-title {
   border-bottom: 2px solid  var(--primaryColor1);
