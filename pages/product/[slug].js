@@ -8,8 +8,8 @@ const products = [
     name: 'Product 1',
     description: 'Description for Product 1',
     image: [ // An array of image URLs
-      'https://example.com/image1.jpg',
-      'https://example.com/image2.jpg',
+      'https://miro.medium.com/v2/resize:fit:1358/1*gGLcu5InZhIG2IMwluQSzQ.jpeg',
+      'https://miro.medium.com/v2/resize:fit:1358/1*gGLcu5InZhIG2IMwluQSzQ.jpeg',
     ],
     // Add other product data fields as needed
   },
@@ -18,8 +18,8 @@ const products = [
     name: 'Product 2',
     description: 'Description for Product 2',
     image: [ // An array of image URLs
-      'https://example.com/image3.jpg',
-      'https://example.com/image4.jpg',
+      'https://miro.medium.com/v2/resize:fit:1358/1*gGLcu5InZhIG2IMwluQSzQ.jpeg',
+      'https://miro.medium.com/v2/resize:fit:1358/1*gGLcu5InZhIG2IMwluQSzQ.jpeg',
     ],
     // Add other product data fields as needed
   },
