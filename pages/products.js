@@ -1,25 +1,24 @@
-import React from 'react'
-import {client} from '../lib/client'
-import { AllProducts } from '../components'
+import React from 'react';
+import { client } from '../lib/client';
+import AllProducts from '../components/AllProducts'; // Assuming your component is named AllProducts
 
-const products = ({Allproducts}) => {
-    return (
-        <div className='Allproducts-container'>
-            {Allproducts?.map(prod => (
-                <AllProducts key={prod._id} allproducts={prod} />
-            ))}
-        </div>
-      )
-}
+const Products = ({ allProducts }) => {
+  return (
+    <div className='Allproducts-container'>
+      {allProducts?.map((product) => (
+        <AllProducts key={product._id} allproducts={product} />
+      ))}
+    </div>
+  );
+};
 
 export const getServerSideProps = async () => {
-    const query = '*[_type == "product"]';
-    const Allproducts = await client.fetch(query);
-    console.log(Allproducts)
-  
-    return {
-      props: { Allproducts }
-    }
-}
+  const query = '*[_type == "product"]';
+  const allProducts = await client.fetch(query);
 
-export default products
+  return {
+    props: { allProducts },
+  };
+};
+
+export default Products;
