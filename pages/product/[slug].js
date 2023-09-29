@@ -23,7 +23,9 @@ const localProducts = [
 console.log(localProducts)
 
 const ProductDetails = ({ productSlug }) => {
+  console.log("Product Slug:", productSlug);  
   const product = localProducts.find((p) => p.slug === productSlug);
+  console.log("Found Product:", product);
   if (!product) {
     return <div>Product not found</div>;
   }
