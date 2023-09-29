@@ -26,10 +26,17 @@ const localProducts = [
 
 const ProductDetails = ({ productSlug }) => {
   const product = localProducts.find((p) => p.slug === productSlug);
+  console.log(product)
 
   if (!product) {
-    return <div>Loading...</div>;
+    return   <div>
+    <h2>{product.name}</h2>
+    <p>Price: ${product.price}</p>
+    {/* Render other product details here */}
+  </div>
   }
+  
+
 
   const { image, name, details, price, tags, care } = product;
   const [index, setIndex] = useState(0);
