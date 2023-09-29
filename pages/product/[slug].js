@@ -4,23 +4,25 @@ import { CgShoppingCart } from 'react-icons/cg';
 import { useStateContext } from '../../context/StateContext';
 
 const localProducts = [
-  {
-    image: ['image-url-1', 'image-url-2'],
-    name: 'Product 1',
-    details: [{ children: [{ text: 'Product 1 details' }] }],
-    price: 10,
-    tags: 'Tag 1',
-    care: [{ children: [{ text: 'Care instructions for Product 1' }] }],
-  },
-  {
-    image: ['image-url-3', 'image-url-4'],
-    name: 'Product 2',
-    details: [{ children: [{ text: 'Product 2 details' }] }],
-    price: 15,
-    tags: 'Tag 2',
-    care: [{ children: [{ text: 'Care instructions for Product 2' }] }],
-  },
-];
+    {
+      slug: 'product-1', // Add slug property matching the expected slug
+      image: ['image-url-1', 'image-url-2'],
+      name: 'Product 1',
+      details: [{ children: [{ text: 'Product 1 details' }] }],
+      price: 10,
+      tags: 'Tag 1',
+      care: [{ children: [{ text: 'Care instructions for Product 1' }] }],
+    },
+    {
+      slug: 'product-2', // Add slug property matching the expected slug
+      image: ['image-url-3', 'image-url-4'],
+      name: 'Product 2',
+      details: [{ children: [{ text: 'Product 2 details' }] }],
+      price: 15,
+      tags: 'Tag 2',
+      care: [{ children: [{ text: 'Care instructions for Product 2' }] }],
+    },
+  ];
 
 const ProductDetails = ({ productSlug }) => {
   const product = localProducts.find((p) => p.slug === productSlug);
