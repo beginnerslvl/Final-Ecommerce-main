@@ -1,41 +1,107 @@
-import { useRouter } from 'next/router';
-import ProductDetails from '../../components/AllProducts' // Import the ProductDetails component
+import { useState } from 'react';
+import { AiOutlineMinus, AiOutlinePlus } from 'react-icons/ai';
 
-// Local product data
-const products = [
-  {
-    slug: 'product-1',
-    name: 'Product 1',
-    description: 'Description for Product 1',
-    // Add other product data fields as needed
-  },
-  {
-    slug: 'product-2',
-    name: 'Product 2',
-    description: 'Description for Product 2',
-    // Add other product data fields as needed
-  },
-  // Add more products as needed
-];
+const ProductDetails = ({ product }) => {
+  const { image, name, details, price, tags, care } = product;
+  const [index, setIndex] = useState(0);
+  const [qty, setQty] = useState(1); // Assuming you want to manage quantity
+  const careList = [];
 
-const ProductPage = () => {
-  const router = useRouter();
-  const { slug } = router.query;
-
-  // Find the product in the local array based on the slug
-  const product = products.find((p) => p.slug === slug);
-
-  // Handle the case where the product is not found
-  if (!product) {
-    return <div>Product not found</div>;
+  for (let i = 0; i < care.length; i++) {
+    careList.push(care[i].children[0].text);
   }
 
+  // Function to decrement quantity
+  const decQty = () => {
+    if (qty > 1) {
+      setQty(qty - 1);
+    }
+  };
+
+  // Function to increment quantity
+  const incQty = () => {
+    setQty(qty + 1);
+  };
+
   return (
-    <div>
-      {/* Render the ProductDetails component with the product data */}
-      <ProductDetails product={product} />
+    <div className='products'>
+      <div className='product-detail-container'>
+        <div className='product-images'>
+          <div className='small-images-container'>
+            {image?.map((item, ind) => (
+              <img
+                key={ind}
+                src={item} // Assuming the 'image' property in your product object contains image URLs
+                className='small-image'
+                onMouseEnter={() => setIndex(ind)}
+              />
+            ))}
+          </div>
+          <div className='big-image-container'>
+            <img src={image && image[index]} alt={name} />
+          </div>
+        </div>
+        <div className='product-details'>
+          <div className='name-and-category'>
+            <h3>{name}</h3>
+            <span>{tags}</span>
+          </div>
+          <div className='size'>
+            <p>SELECT SIZE</p>
+            <ul>
+              <li>XS</li>
+              <li>S</li>
+              <li>M</li>
+              <li>L</li>
+              <li>XL</li>
+            </ul>
+          </div>
+          <div className='quantity-desc'>
+            <h4>Quantity: </h4>
+            <div>
+              <span className='minus' onClick={decQty}>
+                <AiOutlineMinus />
+              </span>
+              <span className='num'>{qty}</span>
+              <span className='plus' onClick={incQty}>
+                <AiOutlinePlus />
+              </span>
+            </div>
+          </div>
+          <div className='add-to-cart'>
+            <button
+              className='btn'
+              type='button'
+              onClick={() => onAdd(product, qty)} // Assuming you have an 'onAdd' function defined elsewhere
+            >
+              <CgShoppingCart size={20} />
+              Add to Cart
+            </button>
+            <p className='price'>$ {price}.00</p>
+          </div>
+        </div>
+      </div>
+
+      <div className='product-desc-container'>
+        <div className='desc-title'>
+          <div className='desc-background'>Overview</div>
+          <h2>Product Information</h2>
+        </div>
+        <div className='desc-details'>
+          <h4>PRODUCT DETAILS</h4>
+          <p>{details[0].children[0].text}</p>
+        </div>
+        <div className='desc-care'>
+          <h4>PRODUCT CARE</h4>
+          <ul>
+            {careList.map((list, index) => (
+              <li key={index}>{list}</li>
+            ))}
+          </ul>
+        </div>
+      </div>
     </div>
   );
 };
 
-export default ProductPage;
+export default ProductDetails;
