@@ -124,9 +124,9 @@ export const getStaticProps = async ({ params: { slug } }) => {
   };
   
   export const getStaticPaths = async () => {
-    const paths = localProducts.map((product) => ({
+    const paths = localProducts.map((product, index) => ({
       params: {
-        slug: product.slug,
+        slug: `product-${index + 1}`,
       },
     }));
   
@@ -135,6 +135,7 @@ export const getStaticProps = async ({ params: { slug } }) => {
       fallback: false, // Change to 'blocking' or 'true' as needed
     };
   };
+  
   
 
 
