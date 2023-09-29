@@ -156,7 +156,7 @@ nav input {
   justify-content: center;
   color: var(--primaryColor2);
   font-weight: 600;
-  padding: 1em 2em ;
+  font-size: .7rem;
 }
 .header-content h1 {
   font-weight: 700;
