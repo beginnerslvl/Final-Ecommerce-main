@@ -20,6 +20,7 @@ const localProducts = [
     care: [{ children: [{ text: 'Care instructions for Product 2' }] }],
   },
 ];
+console.log(localProducts)
 
 const ProductDetails = ({ productSlug }) => {
   const product = localProducts.find((p) => p.slug === productSlug);
