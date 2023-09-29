@@ -1,5 +1,5 @@
 import { useRouter } from 'next/router';
-import ProductDetails from '../../components/ProductDetails'; // Import the ProductDetails component
+import ProductDetails from '../components/AllProducts'; // Import the ProductDetails component
 
 // Local product data
 const products = [
