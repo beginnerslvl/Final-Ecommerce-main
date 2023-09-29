@@ -26,24 +26,31 @@ const products = [
   // Add more products as needed
 ];
 
-const ProductPage = () => {
-  const router = useRouter();
-  const { slug } = router.query;
-
-  // Find the product in the local array based on the slug
-  const product = products.find((p) => p.slug === slug);
-
-  // Handle the case where the product is not found
-  if (!product) {
-    return <div>Product not found</div>;
+export async function getStaticPaths() {
+    // Fetch slugs from your data source or use a predefined array
+    const slugs = ['product-1', 'product-2']; // Example predefined slugs
+  
+    // Map slugs to the format required by Next.js
+    const paths = slugs.map((slug) => ({
+      params: { slug },
+    }));
+  
+    return {
+      paths,
+      fallback: false, // or 'blocking' depending on your use case
+    };
   }
-
-  return (
-    <div>
-      {/* Render the ProductDetails component with the product data */}
-      <ProductDetails product={product} />
-    </div>
-  );
-};
+  
+  // Define getStaticProps to fetch data for a specific product
+  export async function getStaticProps({ params }) {
+    // Fetch data for the specific product based on params.slug
+    const product = fetchProductData(params.slug);
+  
+    return {
+      props: {
+        product,
+      },
+    };
+  }
 
 export default ProductPage;
