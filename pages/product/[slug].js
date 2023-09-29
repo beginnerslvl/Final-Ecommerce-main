@@ -109,12 +109,14 @@ export default ProductDetails
 
 // ... (other imports and code)
 
-export const getStaticProps = async ({ params: { slug } }) => {
+export const getStaticProps = async ({ params }) => {
+    const { slug } = params; // Extract the slug parameter from params
+  
     const product = localProducts.find((p) => p.slug === slug);
   
     if (!product) {
       return {
-        notFound: true,
+        notFound: true, // Return a 404 error if the product is not found
       };
     }
   
@@ -122,6 +124,7 @@ export const getStaticProps = async ({ params: { slug } }) => {
       props: { product },
     };
   };
+  
   
   export const getStaticPaths = async () => {
     const paths = localProducts.map((product, index) => ({
