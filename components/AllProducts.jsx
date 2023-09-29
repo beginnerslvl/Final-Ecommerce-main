@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import { urlFor } from '../lib/client'
-
+console.log("hello world")
 const Allproducts = ({allproducts: {image, name, slug, tags, price}}) => {  
   return (
         <div>
