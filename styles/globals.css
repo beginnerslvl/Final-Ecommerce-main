@@ -82,7 +82,6 @@ nav {
 }
 nav img {
   background-color: #fff;
-  padding: .7em 1.5em ;
   border-radius: 10px;
 }
 .nav-links {
@@ -709,9 +708,10 @@ nav input {
 .features-section .content {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  padding: 0 8rem 4rem;
+  padding: 0 8rem 0;
   background-color: var(--primaryColor1);
 }
+
 .features-section .content .left {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -739,6 +739,7 @@ nav input {
   letter-spacing: 0.03em;
   color: var(--primaryColor2);
   margin-bottom: 1rem;
+  padding-bottom: .75em;
 }
 .features-section .content .left p {
   font-weight: 300;
@@ -746,6 +747,7 @@ nav input {
   line-height: 22px;
   letter-spacing: 0.05em;
   color: var(--primaryColor2);
+  padding-bottom:1em;
 }
 .features-section .content .right {
   display: flex;
@@ -764,6 +766,7 @@ nav input {
   line-height: 26px;
   text-align: justify;
   color: var(--primaryColor2);
+  padding-bottom: 1em;
 }
 .features-section .btn {
   font-size: 0.875rem;
@@ -1296,5 +1299,10 @@ footer p, footer li {
   }
   .Allproduct-card {
     width: 280px;
+  }
+}
+@media(min-width:1000px){
+  .right img{
+    height: 100%;
   }
 }
